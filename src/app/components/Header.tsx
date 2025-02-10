@@ -13,13 +13,13 @@ const Header = () => {
 
     return (
         <div className={styles.header}>
-          <h1 className={styles.title}>Turbys</h1>
+          <h1 className={styles.title}><Link href="/">Turbys</Link></h1>
           <nav className={styles.nav}>
             <ul className={styles.tabs}>
               <li>
                 <Link
                   href="/products"
-                  className={`${styles.tab} ${activeTab === "categories" ? styles.active : ""}`}
+                  className={`${styles.tab} ${activeTab === "products" ? styles.active : ""}`}
                   onClick={() => handleTabClick("catalog")}
                 >
                   Каталог

@@ -17,6 +17,12 @@ interface ProductProp {
 interface ProductsListProp {
     products: ProductProp[]
 }
-  
 
-  
+interface CategoryWithPic {
+    category: string
+    image: string
+}
+
+interface CategoryWithPicList {
+    categories: CategoryWithPic[]
+}

@@ -16,3 +16,19 @@ export async function fetchProductById(id: number): Promise<ProductProp> {
     }
     return res.json();
 }
+
+export async function fetchCategories(): Promise<string[]> {
+    const res = await fetch(`${BASE_URL}/products/categories`, { next: { revalidate: 60 } });
+    if (!res.ok) {
+        throw new Error("Failed to fetch products");
+    }
+    return res.json();
+}
+
+export async function fetchProductsByCategory(category: string): Promise<ProductProp[]> {
+    const res = await fetch(`${BASE_URL}/products/category/${category}`, { next: { revalidate: 60 } });
+    if (!res.ok) {
+        throw new Error("Failed to fetch products");
+    }
+    return res.json();
+}

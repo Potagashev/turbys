@@ -20,7 +20,7 @@ const Header = () => {
                 <Link
                   href="/products"
                   className={`${styles.tab} ${activeTab === "products" ? styles.active : ""}`}
-                  onClick={() => handleTabClick("catalog")}
+                  onClick={() => handleTabClick("products")}
                 >
                   Каталог
                 </Link>
@@ -36,7 +36,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/categories"
+                  href="/about"
                   className={`${styles.tab} ${activeTab === "about" ? styles.active : ""}`}
                   onClick={() => handleTabClick("about")}
                 >

@@ -1,5 +1,5 @@
-import ProductsList from "../components/ProductsList";
 import { fetchProducts } from "../services/api";
+import ProductsList from "./components/ProductsList";
 
 export default async function ProductsPage() {
     try {
